@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="{{.Site.LanguageCode}}">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<!-- PAGE TITLE -->
+	<title>{{ if ne .URL "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}</title>
+
+	{{ if .IsPage }}
+		<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}" />
+		{{ range .Params.tags }}
+			<meta property="article:tag" content="{{ . }}" />
+		{{ end }}
+	{{ end }}
+
+	{{ if .IsPage }}
+		<meta name="description" content="{{ .Description | default (substr .Summary 0 160) }}" />
+	{{ else }}
+		<meta name="description" content="{{ .Site.Params.metadescription | default .Site.Params.description }}" />
+	{{ end }}
+
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- FAVICON -->
+	<!-- <link rel="icon" type="image/png" href="{{ "images/favicon.ico" | relURL}}" />
+	<link rel="apple-touch-icon" sizes="144x144" href="{{ "images/favicon.ico" | relURL}}">
+	<link rel="apple-touch-icon" sizes="192x192" href="{{ "images/192x192_favicon.png" | relURL}}"> -->
+
+	<!-- FAVICON -->
+	<!-- <link rel="apple-touch-icon" sizes="57x57" href="{{ "images/favicons/57x57_favicon.png" | relURL }}">
+	<link rel="apple-touch-icon" sizes="60x60" href="{{ "images/favicons/60x60_favicon.png" | relURL }}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{ "images/favicons/72x72_favicon.png" | relURL }}">
+	<link rel="apple-touch-icon" sizes="76x76" href="{{ "images/favicons/76x76_favicon.png" | relURL }}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{{ "images/favicons/114x114_favicon.png" | relURL }}">
+	<link rel="apple-touch-icon" sizes="120x120" href="{{ "images/favicons/120x120_favicon.png" | relURL }}">
+	<link rel="apple-touch-icon" sizes="144x144" href="{{ "images/favicons/144x144_favicon.png" | relURL }}">
+	<link rel="apple-touch-icon" sizes="152x152" href="{{ "images/favicons/152x152_favicon.png" | relURL }}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ "images/favicons/180x180_favicon.png" | relURL }}">
+	<link rel="icon" type="image/png" href="{{ "images/favicons/32x32_favicon.png" | relURL }}" sizes="32x32">
+	<link rel="icon" type="image/png" href="{{ "images/favicons/194x194_favicon.png" | relURL }}" sizes="194x194">
+	<link rel="icon" type="image/png" href="{{ "images/favicons/96x96_favicon.png" | relURL }}" sizes="96x96">
+	<link rel="icon" type="image/png" href="{{ "images/favicons/192x192_favicon.png" | relURL }}" sizes="192x192">
+	<link rel="icon" type="image/png" href="{{ "images/favicons/16x16_favicon.png" | relURL }}" sizes="16x16">
+	<link rel="manifest" href="{{ "images/favicons/manifest.json" | relURL }}">
+	<link rel="shortcut icon" href="{{ "images/favicons/16x16_favicon.ico" | relURL }}"> -->
+
+	<!-- {{ $css := print "css/" (index .Site.Data.css.hash "shop.min.css") }} -->
+	<link rel="stylesheet" type="text/css" href="css/shop.min.css" />
+
+
+	{{ if .Site.Params.RSSLink}}
+		<link href="{{.Site.Params.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+	{{else}}
+		{{ if ne .URL "/" }}
+			<link href="{{ "index.xml" | relURL}}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+		{{ end }}
+		{{if .IsNode}}
+			<link href="{{.RSSLink}}" rel="alternate" type="application/rss+xml" title="{{ if ne .URL "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}" />
+		{{end}}
+	{{end}}
+
+	{{.Hugo.Generator}}
+
+	<link rel="canonical" href="{{ .Permalink }}" />
+</head>
+<body>

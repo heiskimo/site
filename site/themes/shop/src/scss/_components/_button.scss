@@ -1,0 +1,99 @@
+$btn-list: (
+  (primary,    $black,    $white,    none),
+  (success,    $success,    $white,    none),
+  (error,       $error,       $white,    none),
+  (ghost,      transparent,      $white,    0 0 0 1px $white inset)
+) !default;
+
+%btn {
+    display: inline-block;
+    padding: $spacer-small $spacer-small-plus;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.25s;
+    transition-property: box-shadow, background-color, color, border;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-decoration: none;
+    color: $color-base;
+    border: none;
+    border-radius: 0;
+    background-color: $white;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1;
+  }
+  
+  .btn,
+  .button,
+  [type="button"],
+  button {
+    @extend %btn;
+  
+    &:focus {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+        background-color: $light-gray;
+        text-decoration: none;
+    }
+  }
+  
+  .btn,
+  .button {
+    @each $name, $background-color, $color, $border in $btn-list {
+      &--#{$name} {
+        @extend %btn;
+        background-color: $background-color;
+        color: $color;
+        box-shadow: $border;
+  
+        &:active,
+        &:focus,
+        &:hover {
+          background-color: darken( $background-color, 10% );
+          color: $color;
+        }
+      }
+    }
+  }
+  
+  // button state variants
+  .btn,
+  .button {
+    &--small {
+      padding: $spacer-tiny-plus $spacer-small;
+      font-size: .8em;
+    }
+  
+    &--big {
+      padding: $spacer-small-plus $spacer-medium;
+      font-size: 1.4em;
+    }
+  
+    &--block {
+      width: 100% !important;
+      display: block;
+    }
+  
+    &--unstyled {
+      padding: 0;
+      border: none;
+      text-align: left;
+      background: none;
+      border-radius: 0;
+      box-shadow: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+  
+      &:focus {
+        box-shadow: none;
+        outline: none;
+      }
+    }
+  }

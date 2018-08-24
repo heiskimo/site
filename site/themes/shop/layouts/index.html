@@ -1,0 +1,14 @@
+{{ block "header" . }}{{ partial "header" . }}{{end}}
+<div class="layout">
+    <div class="side">
+        {{ block "navigation" . }}
+            {{ partial "nav" . }}
+        {{ end }}
+    </div>
+    <div class="main">
+        {{ block "main" . }}
+            {{ partial "home" . }}
+        {{end}}
+    </div>
+</div>
+{{ block "footer" . }}{{ partial "footer" . }}{{end}}

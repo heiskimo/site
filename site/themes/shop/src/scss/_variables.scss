@@ -1,0 +1,170 @@
+// ----------------
+// Breakpoints
+// ----------------
+$tiny        : 480px !default; // or 'em' if you prefer, of course
+$small       : 576px !default;
+$medium      : 768px !default;
+$large       : 992px !default;
+$extra-large : 1200px !default;
+
+// ----------
+// Fonts
+// ----------
+$font-family-base      : 'Roboto', sans-serif;
+$font-family-headings  : $font-family-base;
+$font-family-monospace : consolas, courier, monospace !default; // font for code and samples
+
+// Font sizes (1.6rem value is "16px" equivalent)
+$font-size-base : 1.6rem !default;
+
+$font-sizes: (
+	base: (
+		mobile  : 1.4rem,
+		desktop : $font-size-base
+	),
+	h1: (
+		mobile  : 2.8rem,
+		desktop : 3.2rem
+	),
+	h2: (
+		mobile  : 2.4rem,
+		desktop : 2.8rem
+	),
+	h3: (
+		mobile  : 2.0rem,
+		desktop : 2.4rem
+	),
+	h4: (
+		mobile  : 1.8rem,
+		desktop : 2.0rem
+	),
+	h5: (
+		mobile  : 1.6rem,
+		desktop : 1.8rem
+	),
+	h6: (
+		mobile  : 1.4rem,
+		desktop : 1.6rem
+	)
+) !default;
+
+// Line heights
+$line-height-s    : 1.3 !default;
+$line-height-base : 1.5 !default;
+$line-height-l    : 1.7 !default;
+
+// Default margin-bottom
+$margin-bottom-base     : 1rem !default;
+$headings-margin-bottom : $margin-bottom-base /2 !default;
+$paragraph-margin-bottom: $margin-bottom-base !default;
+
+// Font weights
+$weight-light   : 200 !default;
+$weight-book    : 300 !default;
+$weight-regular : 400 !default;
+$weight-medium  : 500 !default;
+$weight-bold    : 700 !default;
+
+// Activate hyphenation on small screens
+$hyphens: false !default;
+
+// ------------
+// Spacing
+// ------------
+
+// Grid gutters (for .has-gutter-* classes)
+$grid-gutters: (
+	'': 1rem,
+	'-l': 2rem,
+	'-xl': 4rem
+) !default;
+
+// Spacings
+$spacer-tiny             : .5rem  !default;
+$spacer-tiny-plus        : .7rem !default;
+$spacer-small            : 1rem !default;
+$spacer-small-plus       : 1.5rem !default;
+$spacer-medium           : 2rem !default;
+$spacer-medium-plus      : 3rem !default;
+$spacer-large            : 4rem !default;
+$spacer-large-plus       : 6rem !default;
+$spacer-extra-large      : 8rem !default;
+$spacer-extra-large-plus : 12rem !default;
+$spacer-ultra-large      : 16rem !default;
+$spacer-ultra-large-plus : 20rem !default;
+
+// ----------
+// Colors
+// ----------
+
+$white : #fff;
+$black : #000;
+$primary: #23334B;
+$secondary: #FFB900;
+$dark-gray: #242424;
+$medium-gray: #595959;
+$light-gray: #F0F0F0;
+$gray: #CCC;
+$error: #F94F5E;
+$success: #2BC497;
+
+$color-palette: (
+	primary: #23334B,
+	secondary: #FFB900,
+	error: #F94F5E,
+	success: #2BC497
+);
+
+$category-palette: (
+	education: #FFB900,
+	reunion: #2BC497,
+	formation: #0EC6DC,
+	evenementiel: #F94F5E,
+	temoignage: #8f39ea,
+	meeting: #2BC497,
+	meetings: #2BC497,
+	training-sessions: #0EC6DC,
+	event: #F94F5E,
+	events: #F94F5E,
+	testimonial: #8f39ea,
+	people: #8f39ea
+);
+
+$tag-palette: (
+	formation: map-get($category-palette, formation),
+	situation: map-get($category-palette, formation),
+	temoignage: map-get($category-palette, formation),
+	meetings: map-get($category-palette, reunion),
+	brainstorming: map-get($category-palette, reunion),
+	creativite: map-get($category-palette, evenementiel)
+);
+
+// Navigation
+$navigation: (
+	bg-color: white,
+	color: $primary
+);
+
+// Buttons
+$buttons: (
+	bg-color: $primary,
+	color: $secondary
+	// hover state
+	// focus state
+);
+
+
+$background-base : $white;
+$color-base      : $dark-gray;
+
+// ---------------
+// Components
+// ---------------
+$link-color: $primary;
+$link-color-hover: darken($link-color, 15%);
+$link-decoration: underline;
+$link-decoration-hover: underline;
+
+$quote-color: $gray;
+
+$nav-width: 7rem;
