@@ -1,3 +1,5 @@
-{{ partial "header.html" . }}
-coucou
-{{ partial "footer.html" . }}
+{{ block "header" . }}{{ partial "header" . }}{{end}}
+{{ block "main" . }}
+    {{ partial "home" . }}
+{{end}}
+{{ block "footer" . }}{{ partial "footer" . }}{{end}}

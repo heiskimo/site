@@ -7,15 +7,6 @@
 	<!-- PAGE TITLE -->
 	<title>{{ if ne .URL "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}</title>
 
-	<!-- Open Graph Meta (facebook, linkedin) -->
-	{{ partial "open-graph.html" . }}
-
-	<!-- Schema.org markup for Google+ -->
-	{{ partial "google-plus.html" . }}
-
-	<!-- Twitter Meta -->
-	{{ partial "twitter-card.html" . }}
-
 	{{ if .IsPage }}
 		<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}" />
 		{{ range .Params.tags }}
@@ -58,17 +49,6 @@
 	{{ $css := print "css/" (index .Site.Data.css.hash "shop.min.css") }}
 	<link rel="stylesheet" type="text/css" href="{{ $css | relURL }}" />
 
-	{{ if .Site.Params.hjsStyle }}
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/{{ .Site.Params.hjsStyle }}.min.css">
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
-		{{ if or .Site.Params.hjsExtraLanguages .Params.hjsExtraLanguages }}
-			{{ range $index, $language := (union .Site.Params.hjsExtraLanguages .Params.hjsExtraLanguages) }}
-				<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/{{ $language }}.min.js"></script>
-			{{ end }}
-		{{ end }}
-		<script>hljs.initHighlightingOnLoad();</script>
-	{{end}}
-
 	{{ if .Site.Params.RSSLink}}
 		<link href="{{.Site.Params.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 	{{else}}
@@ -83,15 +63,5 @@
 	{{.Hugo.Generator}}
 
 	<link rel="canonical" href="{{ .Permalink }}" />
-
-	{{ if .Params.customSemanticPartial }}
-		{{ partial .Params.customSemanticPartial . }}
-	{{ else }}
-		{{ partial "semantic.html" . }}
-	{{end}}
-
-	{{ if .Site.Params.customHeaderPartial }}
-		{{ partial .Site.Params.customHeaderPartial . }}
-	{{ end }}
 </head>
 <body>

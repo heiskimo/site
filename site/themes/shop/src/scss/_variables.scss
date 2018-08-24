@@ -10,7 +10,7 @@ $extra-large : 1200px !default;
 // ----------
 // Fonts
 // ----------
-$font-family-base      : 'Catamaran', sans-serif;
+$font-family-base      : 'Roboto', sans-serif;
 $font-family-headings  : $font-family-base;
 $font-family-monospace : consolas, courier, monospace !default; // font for code and samples
 
@@ -146,7 +146,7 @@ $buttons: (
 );
 
 
-$background-base : $primary;
+$background-base : $white;
 $color-base      : $dark-gray;
 
 // ---------------
