@@ -11,10 +11,21 @@
         text-align: center;
     }
 
+    .nav__logo {
+        height: $nav-width;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav__menu {
+        height: $nav-width;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .nav__lang {
-        background-color: $black;
-        color: $white;
-        text-decoration: none;
         height: $nav-width;
         display: flex;
         align-items: center;

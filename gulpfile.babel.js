@@ -26,23 +26,26 @@ const scssFiles = themeFolder + '/src/scss/**/*.scss',
 const jsFiles = themeFolder + '/src/js/**/*.js',
   jsDest = themeFolder + '/static/js';
 
+const vendorsFiles = themeFolder + '/src/vendors/**/*',
+  vendorsDest = themeFolder + '/static/vendors';
+
 // Development tasks
 gulp.task('hugo', (cb) => buildSite(cb));
 gulp.task('hugo-preview', (cb) => buildSite(cb, hugoArgsPreview));
 
 // Run server tasks
-gulp.task('server', ['hugo', 'scss', 'js'], (cb) => runServer(cb));
-gulp.task('server-preview', ['hugo-preview', 'scss', 'js'], (cb) => runServer(cb));
+gulp.task('server', ['hugo', 'vendors', 'scss', 'js'], (cb) => runServer(cb));
+gulp.task('server-preview', ['hugo-preview', 'vendors', 'scss', 'js'], (cb) => runServer(cb));
 
 // Build/production tasks
-gulp.task('build', ['scss', 'js'], (cb) => buildSite(cb, [], 'production'));
-gulp.task('build-preview', ['scss', 'js'], (cb) => buildSite(cb, hugoArgsPreview, 'production'));
+gulp.task('build', ['vendors', 'scss', 'js'], (cb) => buildSite(cb, [], 'production'));
+gulp.task('build-preview', ['vendors', 'scss', 'js'], (cb) => buildSite(cb, hugoArgsPreview, 'production'));
 
 // Compile SCSS files to CSS
 gulp.task('scss', function() {
   //Delete our old css files
-  del(['dist/**/*.css']);
-  del([cssDest + '**/*.css']);
+  // del(['dist/**/*.css']);
+  // del([cssDest + '**/*.css']);
 
   gulp.src(scssFiles)
     .pipe(sass({
@@ -77,11 +80,17 @@ gulp.task('js', function() {
     .pipe(gulp.dest(jsDest));
 });
 
-// Watch asset folder for changes
-gulp.task('watch', ['scss', 'js'], function() {
-  gulp.watch(scssFiles, ['scss']);
-  gulp.watch(jsFiles, ['js']);
+// Vendors
+gulp.task('vendors', function() {
+  return gulp.src([vendorsFiles])
+    .pipe(gulp.dest(vendorsDest));
 });
+
+// Watch asset folder for changes
+// gulp.task('watch', ['scss', 'js'], function() {
+//   gulp.watch(scssFiles, ['scss']);
+//   gulp.watch(jsFiles, ['js']);
+// });
 
 
 // Development server with browsersync
@@ -91,6 +100,7 @@ function runServer() {
       baseDir: './dist'
     }
   });
+  gulp.watch(vendorsFiles, ['vendors']);
   gulp.watch(scssFiles, ['scss']);
   gulp.watch(jsFiles, ['js']);
   gulp.watch('./site/**/*', ['hugo']);

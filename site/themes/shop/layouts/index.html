@@ -1,6 +1,11 @@
 {{ block "header" . }}{{ partial "header" . }}{{end}}
-<div class="layout">
-    <div class="side">
+<div class="layout uk-offcanvas-content">
+    <div class="mobile-nav uk-hidden@s">
+        {{ block "navigation-mobile" . }}
+            {{ partial "nav-mobile" . }}
+        {{ end }}
+    </div>
+    <div class="side uk-visible@s">
         {{ block "navigation" . }}
             {{ partial "nav" . }}
         {{ end }}
@@ -9,6 +14,24 @@
         {{ block "main" . }}
             {{ partial "home" . }}
         {{end}}
+    </div>
+
+    <div id="my-id" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar">
+
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+            <ul class="uk-nav uk-nav-default">
+                <li class="uk-active"><a href="#">Active</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="uk-nav-header">Header</li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="#">Item</a></li>
+            </ul>
+
+        </div>
     </div>
 </div>
 {{ block "footer" . }}{{ partial "footer" . }}{{end}}

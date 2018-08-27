@@ -46,8 +46,8 @@
 	<link rel="manifest" href="{{ "images/favicons/manifest.json" | relURL }}">
 	<link rel="shortcut icon" href="{{ "images/favicons/16x16_favicon.ico" | relURL }}"> -->
 
-	<!-- {{ $css := print "css/" (index .Site.Data.css.hash "shop.min.css") }} -->
-	<link rel="stylesheet" type="text/css" href="css/shop.min.css" />
+	<link rel="stylesheet" type="text/css" href="{{ "vendors/uikit/css/uikit.min.css" | relURL }}" />
+	<link rel="stylesheet" type="text/css" href="{{ "css/shop.min.css" | relURL }}" />
 
 
 	{{ if .Site.Params.RSSLink}}
