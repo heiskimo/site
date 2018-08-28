@@ -5,6 +5,10 @@
 	display: flex;
 	overflow: hidden;
 
+	@include respond-to("small") {
+		flex-direction: column;
+	  }
+
 	.side {
 		flex: 0 0 $nav-width;
 	}

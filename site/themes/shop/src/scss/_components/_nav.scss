@@ -6,29 +6,18 @@
     justify-content: space-between;
     align-items: center;
 
-    > a {
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav__logo {
-        height: $nav-width;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .nav__menu {
-        height: $nav-width;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
+    .nav__logo,
+    .nav__menu,
     .nav__lang {
         height: $nav-width;
+        width: 100%;
+        text-align: center;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    
+    .nav__logo {
+        color: #242424;
     }
 }

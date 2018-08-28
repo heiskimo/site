@@ -1,3 +1,10 @@
+// Breakpoints
+$tiny        : 480px !default; // or 'em' if you prefer, of course
+$small       : 640px !default;
+$medium      : 960px !default;
+$large       : 1200px !default;
+$extra-large : 1600px !default;
+
 // Navigation
 $nav-width: 5rem;
 $nav-mobile-height: 3rem;
