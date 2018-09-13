@@ -6,10 +6,18 @@
     flex-direction: column;
     justify-content: center;
 
+    @include respond-to("small") {
+        justify-content: flex-start;
+    }
+
     .home__logo {
         position: relative;
         text-align: center;
         color: white;
+        
+        @include respond-to("small") {
+            margin-top: 8rem;
+        }
 
         &:before {
             content: '';

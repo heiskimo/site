@@ -1,0 +1,11 @@
+<div class="list__item">
+        <a href="{{.Permalink}}">
+            <img src="../img/{{ .Params.ImagesFolder }}/{{ .Params.Thumbnail }}" alt="{{ .Params.Title }}">
+        </a>
+        <h3 class="list-item__title">
+             <a href="{{.Permalink}}">{{ .Params.Title }}</a>
+        </h3>
+        <div class="list-item__price">
+            <a href="{{.Permalink}}">{{ .Params.Price }}</a>
+        </div>
+</div>

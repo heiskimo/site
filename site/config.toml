@@ -1,4 +1,6 @@
-baseurl = "https://www.heiskimo.com"
+baseurl = "/"
 theme="shop"
-languageCode = "en-us"
-title = "heskimō™ - Shop"
+languageCode = "fr-fr"
+title = "heiskimō - Shop"
+
+homeURL="/"

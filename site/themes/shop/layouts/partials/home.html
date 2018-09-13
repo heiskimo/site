@@ -1,10 +1,7 @@
-<div class="home uk-background-cover uk-dark" data-src="img/allan-ferreira-722030-unsplash.jpg" uk-img>
-    <div class="home__logo">
-        <img src="img/logo-text.svg" uk-svg class="uk-preserve">
-    </div>
-    <div class="home__btn">
-        <a class="uk-button uk-button-secondary" href="" role="button">
-            Voir nos produits
-        </a>
-    </div>
+<div class="home uk-background-cover uk-dark uk-hidden@s" data-src="{{ "img/sebastian-leon-prado-562482-unsplash.jpg" | relURL }}" uk-img>
+    {{ partial "home-content" . }}
+</div>
+
+<div class="home uk-background-cover uk-dark uk-visible@s" data-src="{{ "img/michael-olsen-501064-unsplash.jpg" | relURL }}" uk-img>
+    {{ partial "home-content" . }}
 </div>

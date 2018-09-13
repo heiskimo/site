@@ -1,0 +1,33 @@
+<article class="product__item">
+    <div class="product-item__head">
+        <div>
+                <h1 class="product-item__title">{{ .Params.Title }}</h1>
+                <div>{{ .Params.Price }}</div>
+        </div>
+        <!-- <a class="uk-button uk-button-secondary" href="#" role="button">
+            Ajouter au panier
+        </a> -->
+        <button
+            class="snipcart-add-item uk-button uk-button-secondary"
+            data-item-id="{{ .Params.Id }}"
+            data-item-name="{{ .Params.Title }}"
+            data-item-price="{{ .Params.Price }}"
+            data-item-url="{{ .Permalink }}"
+            data-item-description="{{ .Params.Description }}">
+            Ajouter au panier
+        </button>
+    </div>
+    
+    <div class="uk-grid uk-child-width-1-3@m" uk-grid uk-lightbox="animation: fade">
+        {{ $folder := .Params.ImagesFolder }}
+        {{ range .Params.Images }}
+            {{ $img := (printf "../../img/%s/%s" $folder .) }}
+            <div>
+                <a class="uk-inline" href="{{ $img }}" data-caption="Caption 1">
+                    <img src="{{ $img }}" alt="">
+                </a>
+            </div>
+        {{ end }}
+    </div>
+    {{ .Content }}
+</article>

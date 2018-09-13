@@ -1,0 +1,20 @@
+<div class="products__nav">
+        <ul class="products-nav__root uk-breadcrumb">
+            <li><a href="{{ .Site.Params.homeURL }}/">Accueil</a></li>
+           
+            {{ if .IsPage }}
+                <li><a href="/products">Produits</a></li>
+            {{ else }}
+                <li><span>Produits</span></li>
+            {{ end }}
+            
+            {{ if .IsPage }}
+                <li><span>{{ .Params.Title }}</span></li>
+            {{ end }}
+        </ul>
+
+        <a href="#" class="products-nav__cart snipcart-checkout snipcart-summary">
+            <span uk-icon="icon: cart; ratio: 1.5"></span>
+            <span class="products-nav-cart__count snipcart-total-items">0</span>
+        </a>
+</div>

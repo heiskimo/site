@@ -7,13 +7,22 @@
 
 	@include respond-to("small") {
 		flex-direction: column;
-	  }
+	}
 
 	.side {
 		flex: 0 0 $nav-width;
+
+		@include respond-to("small") {
+			flex-basis: $nav-mobile-height;
+		}
 	}
 
 	.main {
 		flex: 1 1 auto;
+
+		@include respond-to("small") {
+			overflow: auto;
+        	-webkit-overflow-scrolling: touch;
+		}
 	}
 }

@@ -1,0 +1,19 @@
+{{ block "header" . }}{{ partial "header" . }}{{end}}
+<div class="layout uk-offcanvas-content">
+    <div class="side">
+        {{ block "nav" . }}
+            {{ partial "nav" . }}
+        {{ end }}
+    </div>
+
+    <div class="main">
+        {{ block "product-list" . }}
+            {{ partial "products/list" . }}
+        {{end}}
+    </div>
+
+    {{ block "menu" . }}
+        {{ partial "menu" . }}
+    {{ end }}
+</div>
+{{ block "footer" . }}{{ partial "footer" . }}{{end}}

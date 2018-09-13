@@ -1,37 +1,19 @@
 {{ block "header" . }}{{ partial "header" . }}{{end}}
 <div class="layout uk-offcanvas-content">
-    <div class="mobile-nav uk-hidden@s">
-        {{ block "navigation-mobile" . }}
-            {{ partial "nav-mobile" . }}
-        {{ end }}
-    </div>
-    <div class="side uk-visible@s">
-        {{ block "navigation" . }}
+    <div class="side">
+        {{ block "nav" . }}
             {{ partial "nav" . }}
         {{ end }}
     </div>
+
     <div class="main">
-        {{ block "main" . }}
+        {{ block "plop" . }}
             {{ partial "home" . }}
         {{end}}
     </div>
 
-    <div id="my-id" uk-offcanvas="overlay: true">
-        <div class="uk-offcanvas-bar">
-
-            <button class="uk-offcanvas-close" type="button" uk-close></button>
-
-            <ul class="uk-nav uk-nav-default">
-                <li class="uk-active"><a href="#">Active</a></li>
-                <li><a href="#">Item</a></li>
-                <li class="uk-nav-header">Header</li>
-                <li><a href="#">Item</a></li>
-                <li><a href="#">Item</a></li>
-                <li class="uk-nav-divider"></li>
-                <li><a href="#">Item</a></li>
-            </ul>
-
-        </div>
-    </div>
+    {{ block "menu" . }}
+        {{ partial "menu" . }}
+    {{ end }}
 </div>
 {{ block "footer" . }}{{ partial "footer" . }}{{end}}

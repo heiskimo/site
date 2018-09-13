@@ -13,11 +13,13 @@
         align-items: center;
         justify-content: center;
         width: $nav-mobile-height;
-        height: $nav-mobile-height;;
+        height: $nav-mobile-height;
         text-align: center;
     }
 
     .nav__logo {
+        color: #242424;
+
         img,
         svg {
             height: 2.5rem;
