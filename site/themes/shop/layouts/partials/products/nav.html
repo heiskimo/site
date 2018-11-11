@@ -1,11 +1,11 @@
 <div class="products__nav">
         <ul class="products-nav__root uk-breadcrumb">
-            <li><a href="{{ .Site.Params.homeURL }}/">Accueil</a></li>
+            <li><a href="{{ .Site.Params.homeURL }}/">{{ .Site.Params.products.breadcrumb.home }}</a></li>
            
             {{ if .IsPage }}
-                <li><a href="/products">Produits</a></li>
+                <li><a href="{{with .CurrentSection}}{{.Permalink}}{{end}}">{{ .Parent.Title }}</a></li>
             {{ else }}
-                <li><span>Produits</span></li>
+                <li><span>{{ .Title }}</span></li>
             {{ end }}
             
             {{ if .IsPage }}

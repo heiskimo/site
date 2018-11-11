@@ -1,10 +1,13 @@
 <button class="nav__lang uk-button uk-button-secondary" href="#">
-    FR
+    {{ .Lang }}
 </button>
 
 <div uk-dropdown="pos: right-center; mode: click" class="uk-dropdown">
     <ul class="uk-nav uk-dropdown-nav">
-        <li class="uk-active"><a href="#">FR</a></li>
-        <li><a href="#">EN</a></li>
+        <li class="uk-active"><a href="{{ .Permalink }}">{{ .Lang | upper }}</a></li>
+        {{ range .Translations }}
+            <li><a href="{{ .Permalink }}">{{ .Lang | upper }}</a></li>
+        {{ end }}
+        
     </ul>
 </div>

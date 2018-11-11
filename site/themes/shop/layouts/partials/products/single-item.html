@@ -14,14 +14,14 @@
             data-item-price="{{ .Params.Price }}"
             data-item-url="{{ .Permalink }}"
             data-item-description="{{ .Params.Description }}">
-            Ajouter au panier
+            {{ .Site.Params.products.add }}
         </button>
     </div>
     
     <div class="uk-grid uk-child-width-1-3@m" uk-grid uk-lightbox="animation: fade">
         {{ $folder := .Params.ImagesFolder }}
         {{ range .Params.Images }}
-            {{ $img := (printf "../../img/%s/%s" $folder .) }}
+            {{ $img := (printf "img/%s/%s" $folder . | relURL) }}
             <div>
                 <a class="uk-inline" href="{{ $img }}" data-caption="Caption 1">
                     <img src="{{ $img }}" alt="">

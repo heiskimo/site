@@ -4,14 +4,20 @@
             <button class="uk-offcanvas-close" type="button" uk-close></button>
 
             <ul class="uk-nav uk-nav-default">
-                <li class="uk-nav-header"><a href=""> La boutique</a></li>
-                <li><a href="">Femme</a></li>
-                <li><a href="">Homme</a></li>
-                <li class="uk-nav-header">A propos</li>
-                <li><a href="">Le concept</a></li>
-                <li><a href="">Où nous trouver ?</a></li>
+                <li class="uk-nav-header">{{ .Site.Params.menu.home }}</li>
+                {{ range where .Site.Pages "Section" "products" }}
+                    {{ if (.IsAncestor .) }}
+                    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                    {{ end }}
+                {{ end }}
+
+                <!-- <li><a href="">{{ .Site.Params.menu.woman }}</a></li>
+                <li><a href="">{{ .Site.Params.menu.man }}</a></li> -->
+                <li class="uk-nav-header">{{ .Site.Params.menu.about }}</li>
+                <li><a href="{{ "about" | relLangURL }}">{{ .Site.Params.menu.concept }}</a></li>
+                <li><a href="{{ "find-us" | relLangURL }}">{{ .Site.Params.menu.where }}</a></li>
                 <li class="uk-nav-divider uk-margin-top"></li>
-                <li class="uk-nav-header">Suivez notre actualité</li>
+                <li class="uk-nav-header">{{ .Site.Params.menu.follow_us }}</li>
                 <li><a href=""><span uk-icon="instagram" class="uk-margin-small-right"></span>Instagram</a></li>
                 <li><a href=""><span uk-icon="facebook" class="uk-margin-small-right"></span>Facebook</a></li>
                 <li><a href=""><span uk-icon="youtube" class="uk-margin-small-right"></span>Youtube</a></li>

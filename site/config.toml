@@ -1,6 +1,47 @@
+DefaultContentLanguage = "fr"
+DefaultContentLanguageInSubdir = true
 baseurl = "/"
 theme="shop"
 languageCode = "fr-fr"
-title = "heiskimō - Shop"
 
 homeURL="/"
+
+[languages]
+    [languages.fr]
+        title="heiskimō - La boutique"
+        weight = 1
+        [languages.fr.params]
+            [languages.fr.params.home]
+            products="Voir les produits"
+            [languages.fr.params.menu]
+            home = "La boutique"
+            man="Homme"
+            woman="Femme"
+            about="A propos"
+            concept="Le concept"
+            where="Où nous trouver ?"
+            follow_us="Suivez notre actualité"
+            [languages.fr.params.products]
+                add="Ajouter au panier"
+                [languages.fr.params.products.breadcrumb]
+                    home="Accueil"
+                    products="Produits"
+    [languages.en]
+        title = "heiskimō - Shop"
+        weight = 2
+        [languages.en.params]
+            [languages.en.params.home]
+            products="See all products"
+            [languages.en.params.menu]
+            home = "The shop"
+            man="Man"
+            woman="Woman"
+            about="About us"
+            concept="Concept"
+            where="Find us"
+            follow_us="Follow us"
+            [languages.en.params.products]
+                add="Add to cart"
+                [languages.en.params.products.breadcrumb]
+                    home="Home"
+                    products="Products"

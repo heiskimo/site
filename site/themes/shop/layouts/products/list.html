@@ -7,9 +7,17 @@
     </div>
 
     <div class="main">
-        {{ block "product-list" . }}
-            {{ partial "products/list" . }}
-        {{end}}
+        {{ if .Sections }}
+            {{ range .Sections }}
+                <li>
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </li>
+            {{ end }}
+        {{ else }}
+            {{ block "product-list" . }}
+                {{ partial "products/list" . }}
+            {{end}}
+        {{ end }}
     </div>
 
     {{ block "menu" . }}
