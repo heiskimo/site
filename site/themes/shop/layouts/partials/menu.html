@@ -6,7 +6,7 @@
             <ul class="uk-nav uk-nav-default">
                 <li class="uk-nav-header">{{ .Site.Params.menu.home }}</li>
                 {{ range where .Site.Pages "Section" "products" }}
-                    {{ if (.IsAncestor .) }}
+                    {{ if and (.IsAncestor .) (not (.Sections)) }}
                     <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
                     {{ end }}
                 {{ end }}
