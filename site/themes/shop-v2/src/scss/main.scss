@@ -1,0 +1,22 @@
+@import './normalize';
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: #495aa2;
+    }
+}
+
+@import './font';
+@import './header';
+
+

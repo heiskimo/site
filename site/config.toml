@@ -1,7 +1,7 @@
 DefaultContentLanguage = "fr"
 DefaultContentLanguageInSubdir = true
 baseurl = "/"
-theme="shop"
+theme="shop-v2"
 languageCode = "fr-fr"
 
 homeURL="/"

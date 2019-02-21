@@ -6,7 +6,7 @@
 	flex-direction: column;
 	overflow: hidden;
 
-	.side {
+	.top-bar {
 		flex: 0 0 $nav-height;
 	}
 
@@ -14,5 +14,9 @@
 		flex: 1;
 		overflow: auto;
 		-webkit-overflow-scrolling: touch;
+	}
+
+	.main__root-section {
+		display: flex;
 	}
 }

@@ -1,6 +1,6 @@
 {{ block "header" . }}{{ partial "header" . }}{{end}}
 <div class="layout uk-offcanvas-content">
-    <div class="side">
+    <div class="top-bar">
         {{ block "nav" . }}
             {{ partial "nav" . }}
         {{ end }}
@@ -8,11 +8,7 @@
 
     <div class="main">
         {{ if .Sections }}
-            {{ range .Sections }}
-                <li>
-                    <a href="{{ .Permalink }}">{{ .Title }}</a>
-                </li>
-            {{ end }}
+            {{ partial "products/home" . }}
         {{ else }}
             {{ block "product-list" . }}
                 {{ partial "products/list" . }}

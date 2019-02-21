@@ -1,0 +1,42 @@
+$header-background-color: #fff;
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $header-background-color;
+
+    > * {
+        flex-basis: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    > *:first-child,
+    > *:last-child {
+        flex-basis: 40%;
+    }
+
+    > *:first-child {
+        justify-content: flex-start;
+    }
+
+    > *:last-child {
+        justify-content: flex-end;
+    }
+
+    .h__links {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        list-style: none;
+        
+        a {
+            padding: 1rem;
+            display: block;
+            font-family: $ff2;
+        }
+    }
+}

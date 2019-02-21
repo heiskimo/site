@@ -39,28 +39,6 @@
             color: $black;
         }
     }
-
-    .products-nav__cart {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        color: $black;
-        text-decoration: none;
-
-        .products-nav-cart__count {
-            font-weight: 600;
-            background: $black;
-            color: white;
-            display: inline-block;
-            height: 1.5rem;
-            width: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 2rem;
-            font-size: .8em;
-        }
-    }
 }
 
 // Product item
@@ -88,6 +66,43 @@
         a {
             color: $black;
             text-decoration: none;
+        }
+    }
+}
+
+.product__home {
+    display: flex;
+    height: 100%;
+
+    .product-home__section {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-decoration: none;
+        
+
+        &.product-home__section--women {
+            background-image: url('https://images.unsplash.com/photo-1542838686-b08706f6f2d1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80');
+        }
+
+        &.product-home__section--men {
+            background-image: url('https://images.unsplash.com/photo-1542838687-f960f044ef1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80');
+        }
+
+        span {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            background: #000;
+            padding: 1rem 2rem;
+            text-align: center;
+            margin: 1rem;
         }
     }
 }

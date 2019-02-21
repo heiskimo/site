@@ -1,5 +1,15 @@
 <nav class="nav">
-    <a class="nav__menu uk-icon" href="#my-id" uk-toggle uk-icon="menu"></a>
-    {{ partial "logo" . }}
-    {{ partial "lang" . }}
+    <div class="nav__menu">
+        <a class="uk-icon" href="#my-id" uk-toggle uk-icon="menu"></a>
+    </div>
+    <div class="nav__logo">
+        {{ partial "logo" . }}
+    </div>
+    <div class="nav__lang-and-cart">
+        {{ partial "lang" . }}
+        <a href="#" class="nav__cart snipcart-checkout snipcart-summary">
+            <span uk-icon="icon: cart; ratio: 1.3"></span>
+            <span class="nav-cart__count snipcart-total-items">0</span>
+        </a>
+    </div>
 </nav>

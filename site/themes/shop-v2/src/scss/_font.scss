@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,700');
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
+
+$ff1: 'Karla', sans-serif;
+$ff2: 'Crimson Text', serif;
+
+body {
+	font-family: $ff1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $ff2;
+}

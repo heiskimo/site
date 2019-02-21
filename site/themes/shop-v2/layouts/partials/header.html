@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{.Site.LanguageCode}}">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<title>{{ if ne .URL (printf "/%s/" .Lang) }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="NjcwNTMwMzItYzE5Ni00ZWI2LWI5MDktMzNkNWVlZTdmZTkwNjM2NzE2ODQ3MjU1MDgzMTMz" data-autopop="false" id="snipcart"></script>
+	<link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />
+
+	<link rel="stylesheet" type="text/css" href="{{ "css/shop-v2.min.css" | relURL }}" />
+
+	{{.Hugo.Generator}}
+
+	<link rel="canonical" href="{{ .Permalink }}" />
+</head>
+<body>
+	<header class="header h">
+		<ul class="h__links">
+			<li>
+				<a href="">Collections</a>
+			</li>
+			<li>
+				<a href="">La marque</a>
+			</li>
+			<li>
+				<a href="">Contact</a>
+			</li>
+		</ul>
+		<a href="" class="h__logo">
+			heiskimō
+		</a>
+		<div class="h__tools">
+			<a href="" class="h__checkout">10</a>
+			<a href="" class="h__lang">FR</a>
+		</div>
+	</header>
+
+	<section class="banner b">
+		
+	</section>

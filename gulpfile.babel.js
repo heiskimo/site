@@ -17,7 +17,7 @@ const browserSync = BrowserSync.create();
 const hugoArgsDefault = ['-d', '../dist', '-s', 'site', '-v'];
 const hugoArgsPreview = ['--buildDrafts', '--buildFuture'];
 
-const themeName = 'shop';
+const themeName = 'shop-v2';
 const themeFolder = 'site/themes/' + themeName;
 
 const scssFiles = themeFolder + '/src/scss/**/*.scss',

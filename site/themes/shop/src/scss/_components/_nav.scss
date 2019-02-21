@@ -6,23 +6,74 @@
     justify-content: space-between;
     align-items: center;
 
-    .nav__logo,
-    .nav__menu,
-    .nav__lang {
+    .nav__menu {
+        flex-basis: 30%;
+        height: $nav-height;
         display: flex;
         align-items: center;
-        justify-content: center;
-        width: $nav-height;
-        height: $nav-height;
-        text-align: center;
+        justify-content: flex-start;
+
+        > a {
+            width: $nav-height;
+            height: $nav-height;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     .nav__logo {
-        color: #242424;
+        flex-basis: 40%;
+        height: $nav-height;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        > a {
+            color: #242424;
+            padding: 0 1rem;
+            max-width: $nav-height * 2;
+        }
 
         img,
         svg {
             height: $nav-height;
+        }
+    }
+
+    .nav__lang-and-cart {
+        flex-basis: 30%;
+        height: $nav-height;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nav__lang {
+        padding: 0;
+        height: $nav-height;
+        width: $nav-height;
+    }
+
+    .nav__cart {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        color: $black;
+        text-decoration: none;
+        padding: 0 1rem;
+
+        .nav-cart__count {
+            font-weight: 600;
+            background: $black;
+            color: white;
+            display: inline-block;
+            height: 1.5rem;
+            width: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2rem;
+            font-size: .8em;
         }
     }
 }
