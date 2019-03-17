@@ -1,0 +1,26 @@
+.insta-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+
+    .insta {
+        padding: 1rem;
+        flex: 1 1 calc(100% / 3);
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@include respond-to("small") {
+   .insta-list {
+       margin: 0 -0.5rem;
+
+       .insta {
+           padding: 0.5rem;
+       }
+   }
+}

@@ -1,29 +1,40 @@
 $header-background-color: #fff;
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
     background-color: $header-background-color;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
-    > * {
-        flex-basis: 20%;
+    .h__navigation {
         display: flex;
         align-items: center;
-        justify-content: center;
-    }
+        justify-content: space-between;
+        max-width: 80rem;
+        margin: auto;
 
-    > *:first-child,
-    > *:last-child {
-        flex-basis: 40%;
-    }
+        > * {
+            flex-basis: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    > *:first-child {
-        justify-content: flex-start;
-    }
+        > *:first-child,
+        > *:last-child {
+            flex-basis: 40%;
+        }
 
-    > *:last-child {
-        justify-content: flex-end;
+        > *:first-child {
+            justify-content: flex-start;
+        }
+
+        > *:last-child {
+            justify-content: flex-end;
+        }    
     }
 
     .h__links {
@@ -37,6 +48,85 @@ $header-background-color: #fff;
             padding: 1rem;
             display: block;
             font-family: $ff2;
+        }
+    }
+
+    .h__logo {
+        height: 1.5rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .h__checkout {
+        padding: 1rem;
+        display: inline-flex;
+        align-items: center;
+
+        &:hover > svg {
+            fill: $primary-color;
+        }
+
+        > svg {
+            height: 18px;
+            width: 18px;
+            margin-right: 0.5rem;
+            transition: fill 0.3s ease;
+        }
+
+        > span {
+            font-weight: bold;
+        }
+    }
+
+    .h__lang {
+        position: relative;
+        margin-left: 0.5rem;
+
+        &:hover {
+            select {
+                border-color: $primary-color;
+                color: $primary-color;
+            }
+
+            svg {
+                fill: $primary-color;
+            }
+        }
+
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: white;
+            border: 1px solid #eee;
+            height: 2rem;
+            width: 3rem;
+            color: #242424;
+            font-size: .8rem;
+            border-radius: 0.3rem;
+            padding: 0 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            
+            &:focus {
+                outline: none;
+            }
+        }
+
+        svg {
+            pointer-events: none;
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0.3rem;
+            fill: #888;
+            transition: fill 0.3s ease;
         }
     }
 }

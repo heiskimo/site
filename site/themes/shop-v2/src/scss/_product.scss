@@ -1,0 +1,46 @@
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+
+    .product {
+        flex: 1 1 calc(100% / 3);
+        padding: 1rem;
+
+        .p__picture {
+            width: 100%;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .p__description {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+
+        .p__price {
+            small {
+                font-size: 80%;
+            }
+        }
+    }
+}
+
+@include respond-to("small") {
+    .product-list {
+        display: block;
+
+        .product {
+            width: 100%;
+            
+            .p__picture {
+                height: 10rem;
+            }
+        }
+    }
+}

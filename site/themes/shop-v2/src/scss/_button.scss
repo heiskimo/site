@@ -1,0 +1,45 @@
+a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover,
+    &:focus {
+        color: $primary-color;
+    }
+}
+
+.link {
+    position: relative;
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.3rem 0;
+
+    &:hover:before {
+        animation: linkBefore 0.3s ease;
+    }
+
+    &:before {
+        content: '';
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-bottom: 1px solid;
+        height: 1px;
+        position: absolute;
+    }
+}
+
+@keyframes linkBefore {
+    0% {
+        width: 0;
+    }
+
+    70% {
+        width: 101%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

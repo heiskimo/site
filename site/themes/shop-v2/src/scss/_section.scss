@@ -1,0 +1,36 @@
+$section-background-color: #fff;
+$section-background-color-dark: $primary-color;
+$section-max-width: 50rem;
+
+.section {
+    background-color: $section-background-color;
+    width: 100%;
+    padding: 3rem 1rem;
+
+    &.sctn--center {
+        text-align: center;
+    }
+
+    &.sctn--dark {
+        background-color: rgba($primary-color, 0.1);
+    }
+
+    .sctn__content {
+        width: $section-max-width;
+        margin: auto;
+    }
+
+    .sctn__more {
+        &.sctn__more--right {
+            text-align: right;
+        }
+    }
+}
+
+@include respond-to("small") {
+    .section {
+        .sctn__content {
+            width: 100%;
+        }
+    }
+}

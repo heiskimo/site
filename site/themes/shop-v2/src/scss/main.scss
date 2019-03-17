@@ -6,17 +6,15 @@
     box-sizing: border-box;
 }
 
-a {
-    color: #000;
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-        color: #495aa2;
-    }
-}
-
+@import './var';
 @import './font';
+@import './breakpoint';
+@import './button';
 @import './header';
+@import './footer';
+@import './banner';
+@import './section';
+@import './product';
+@import './instagram';
 
 
