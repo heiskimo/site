@@ -98,7 +98,8 @@ function runServer() {
   browserSync.init({
     server: {
       baseDir: './dist'
-    }
+    },
+    ghostMode: false
   });
   gulp.watch(vendorsFiles, ['vendors']);
   gulp.watch(scssFiles, ['scss']);

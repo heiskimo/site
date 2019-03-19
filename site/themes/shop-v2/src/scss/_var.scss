@@ -1,1 +1,8 @@
 $primary-color: #495aa2;
+
+$header-background-color: #fff;
+
+$footer-background-color: darken($primary-color, 20%);
+$footer-color: white;
+$footer-link-color: rgba(white, 0.7);
+$footer-link-color-hover: white;

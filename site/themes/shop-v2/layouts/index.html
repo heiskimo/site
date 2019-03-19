@@ -1,52 +1,53 @@
 {{ block "header" . }}{{ partial "header" . }}{{end}}
-<section class="banner">
-    <img src="http://placeimg.com/1920/1080/any/people?v=a" alt="">
-    <a href="">
-            <svg
-                aria-hidden="true"
-                focusable="false"
-                role="presentation"
-                viewBox="0 0 100 100"
-            >
-                <path d="M52.575 76.81V12.586h-5V76.81L24.269 53.504l-3.38 3.381 29.186 29.187 29.186-29.187-3.38-3.38L52.575 76.81z"></path>
-            </svg>
-    </a>
-</section>
-<div class="section sctn sctn--center">
-    <div class="sctn__content">
-        <h1>Une marque francaise indépendante.</h1>
-        <p>Nous concevons des vêtements de qualité pour une mode durable et éthique.</p>
-        <div class="sctn__more">
-            <a href="" class="link">En savoir plus</a>
+<div class="content c">
+    <section class="banner">
+        <img src="http://placeimg.com/1920/1080/any/people?v=a" alt="">
+        <button id="scroll-down" href="#">
+                <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 100 100"
+                >
+                    <path d="M52.575 76.81V12.586h-5V76.81L24.269 53.504l-3.38 3.381 29.186 29.187 29.186-29.187-3.38-3.38L52.575 76.81z"></path>
+                </svg>
+            </button>
+    </section>
+    <div id="about" class="section sctn sctn--center">
+        <div class="sctn__content">
+            <h1>Une marque francaise indépendante.</h1>
+            <p>Nous concevons des vêtements de qualité pour une mode durable et éthique.</p>
+            <div class="sctn__more">
+                <a href="" class="link">En savoir plus</a>
+            </div>
         </div>
     </div>
-</div>
-<div class="section sctn sctn--center sctn--dark">
-    <div class="sctn__content">
-        <h2>Collection été 2019</h2>
-        <div class="product-list">
-            <div class="product">
-                <div class="p__picture">
-                    <img src="http://placeimg.com/400/400/any/people?v=a" alt="">
+    <div class="section sctn sctn--center sctn--dark">
+        <div class="sctn__content">
+            <h2>Collection été 2019</h2>
+            <div class="product-list">
+                <div class="product">
+                    <div class="p__picture">
+                        <img src="http://placeimg.com/400/400/any/people?v=a" alt="">
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="p__picture">
+                        <img src="http://placeimg.com/400/400/any/people?v=b" alt="">
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="p__picture">
+                        <img src="http://placeimg.com/400/400/any/people?v=c" alt="">
+                    </div>
                 </div>
             </div>
-            <div class="product">
-                <div class="p__picture">
-                    <img src="http://placeimg.com/400/400/any/people?v=b" alt="">
-                </div>
+            <div class="sctn__more">
+                <a href="" class="link">Voir la collection</a>
             </div>
-            <div class="product">
-                <div class="p__picture">
-                    <img src="http://placeimg.com/400/400/any/people?v=c" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="sctn__more">
-            <a href="" class="link">Voir la collection</a>
         </div>
     </div>
-</div>
-<div class="section sctn">
+    <div class="section sctn">
         <div class="sctn__content">
             <h2>Instagram</h2>
             <p>Suivez-nous pour faire grandir la communauté heiskimo ! :)</p>
@@ -72,4 +73,5 @@
             </div>
         </div>
     </div>
+</div>
 {{ block "footer" . }}{{ partial "footer" . }}{{end}}

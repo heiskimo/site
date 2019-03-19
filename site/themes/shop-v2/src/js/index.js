@@ -33,10 +33,16 @@ document.addEventListener('DOMContentLoaded', (/* event */) => {
     const mobileMenuClose = document.getElementById('mobile-menu-close');
     mobileMenuClose.addEventListener('touchstart', closeMenu);
     mobileMenuClose.addEventListener('click', closeMenu);
+
+    const scrollDownBtn = document.getElementById('scroll-down');
+    if (scrollDownBtn) {
+        scrollDownBtn.addEventListener('click', goDown);
+    }
 });
 
 function changeLanguage (event) {
-	console.log('change lang', event.target.value);
+    console.log('change lang', event.target.value);
+    document.location.href = event.target.value;
 }
 
 function openMenu (e) {
@@ -53,4 +59,9 @@ function closeMenu (e) {
 
 function preventMobileScroll (e) {
     e.preventDefault();
+}
+
+function goDown (event) {
+    event.preventDefault();
+    document.documentElement.scrollTop = document.querySelector('#about').offsetTop;
 }

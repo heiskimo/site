@@ -1,0 +1,11 @@
+{{ block "header" . }}{{ partial "header" . }}{{end}}
+<div class="content c">
+    {{ if .Sections }}
+        {{ partial "products/home" . }}
+    {{ else }}
+        {{ block "product-list" . }}
+            {{ partial "products/list" . }}
+        {{end}}
+    {{ end }}
+</div>
+{{ block "footer" . }}{{ partial "footer" . }}{{end}}

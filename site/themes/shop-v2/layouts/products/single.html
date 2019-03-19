@@ -1,0 +1,7 @@
+{{ block "header" . }}{{ partial "header" . }}{{end}}
+<div class="content c">
+    {{ block "product-single" . }}
+        {{ partial "products/single" . }}
+    {{end}}
+</div>
+{{ block "footer" . }}{{ partial "footer" . }}{{end}}

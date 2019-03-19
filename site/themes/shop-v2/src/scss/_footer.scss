@@ -1,8 +1,3 @@
-$footer-background-color: darken($primary-color, 20%);
-$footer-color: white;
-$footer-link-color: rgba(white, 0.7);
-$footer-link-color-hover: white;
-
 .footer {
     &.section {
         background-color: $footer-background-color;

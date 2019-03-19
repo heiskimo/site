@@ -1,4 +1,7 @@
 @import './normalize';
+@import './var';
+@import './font';
+@import './breakpoint';
 
 *,
 *::after,
@@ -6,15 +9,20 @@
     box-sizing: border-box;
 }
 
-@import './var';
-@import './font';
-@import './breakpoint';
+html {
+    scroll-behavior: smooth;
+}
+
+html, 
+body {
+    min-height: 100vh;
+    background-color: $footer-background-color;
+}
 @import './button';
 @import './header';
 @import './footer';
+@import './content';
 @import './banner';
 @import './section';
 @import './product';
 @import './instagram';
-
-

@@ -1,5 +1,3 @@
-$header-background-color: #fff;
-
 .header {
     position: sticky;
     z-index: 10;
@@ -13,7 +11,7 @@ $header-background-color: #fff;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        max-width: 80rem;
+        max-width: 60rem;
         margin: auto;
 
         > * {
@@ -134,26 +132,16 @@ $header-background-color: #fff;
         display: none;
     }
 
-    .h__mobile__burger {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1rem;
+    
 
-        > svg {
-            width: 18px;
-            height: 18px;
-        }
-    }
-
-    .h__hide-for-small {
+    .h__show-for-small {
         display: none;
     }
 }
 
 @include respond-to('small') {
     .header {
-        .h__hide-for-small {
+        .h__show-for-small {
             display: block;
         }
 
@@ -195,7 +183,12 @@ $header-background-color: #fff;
 
                     &:last-child {
                         margin-top: auto;
-                        border-top: 1px solid rgba(0, 0, 0, .1);
+
+                        a {
+                            text-align: center;
+                            font-size: 2rem;
+                            background-color: rgba($primary-color, 0.1);
+                        }
                     }
                 }
 
@@ -219,8 +212,20 @@ $header-background-color: #fff;
                 justify-content: center;
     
                 > svg {
-                    width: 18px;
-                    height: 18px;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            .h__mobile__burger {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem;
+        
+                > svg {
+                    width: 20px;
+                    height: 20px;
                 }
             }
         }

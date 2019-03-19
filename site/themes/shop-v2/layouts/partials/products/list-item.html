@@ -1,0 +1,16 @@
+
+<div class="product">
+    <div class="p__picture">
+        <a href="{{.Permalink}}">
+            <img src="{{ "img" | relURL }}/{{ .Params.ImagesFolder }}/{{ .Params.Thumbnail }}" alt="{{ .Params.Title }}">
+        </a>
+    </div>
+    <div class="p__description">
+        <div class="p__label">
+            <a href="{{.Permalink}}">{{ .Params.Title }}</a>
+        </div>
+        <div class="p__price">
+            <a href="{{.Permalink}}">{{ .Params.Price }}</a>
+        </div>
+    </div>
+</div>
