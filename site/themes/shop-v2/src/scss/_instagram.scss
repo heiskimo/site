@@ -1,11 +1,17 @@
-.insta-list {
+.picture-list {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -1rem;
 
-    .insta {
+    &.picture-list--grow {
+        .picture {
+            flex-grow: 1;
+        }
+    }
+
+    .picture {
         padding: 1rem;
-        flex: 1 1 calc(100% / 3);
+        flex: 0 1 calc(100% / 3);
 
         img {
             object-fit: cover;
@@ -16,10 +22,10 @@
 }
 
 @include respond-to("small") {
-   .insta-list {
+   .picture-list {
        margin: 0 -0.5rem;
 
-       .insta {
+       .picture {
            padding: 0.5rem;
        }
    }

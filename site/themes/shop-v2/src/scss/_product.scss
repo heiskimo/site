@@ -3,8 +3,14 @@
     flex-wrap: wrap;
     margin: 0 -1rem;
 
+    &.product-list--grow {
+        .product {
+            flex-grow: 1;
+        }
+    }
+
     .product {
-        flex: 1 1 calc(100% / 3);
+        flex: 0 1 calc(100% / 3);
         padding: 1rem;
 
         .p__picture {

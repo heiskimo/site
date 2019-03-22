@@ -4,7 +4,7 @@
         <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem vitae sed, voluptas, incidunt ullam ducimus quas delectus quis distinctio quibusdam nihil reprehenderit libero fugit magnam. Possimus incidunt iste cupiditate fugiat!
         </p>
-        <div class="product-list">
+        <div class="product-list product-list--grow">
             {{ range .Sections }}
                 {{ $section := index (last 1 (split (delimit (split .URL "/") "," "") ",")) 0 }}
                 <div class="product">

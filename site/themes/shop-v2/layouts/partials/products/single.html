@@ -16,11 +16,11 @@
         >
             {{ .Site.Params.products.add }}
         </button>
-        <div class="insta-list">
+        <div class="picture-list">
             {{ $folder := .Params.ImagesFolder }}
             {{ range .Params.Images }}
                 {{ $img := (printf "img/%s/%s" $folder . | relURL) }}
-                <div class="insta">
+                <div class="picture">
                     <a href="{{ $img }}">
                         <img src="{{ $img }}" alt="">
                     </a>
