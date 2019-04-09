@@ -1,16 +1,12 @@
-<div class="section sctn">
-    <div class="sctn__content">
-        <h1>
-            {{ if .IsPage }}
-                {{ .Parent.Title }}
-            {{ else }}
-                {{ .Title }}
-            {{ end }}
-        </h1>
-        <div class="product-list">
-            {{ range .Pages }}
-                {{ partial "products/list-item" . }}
-            {{ end }}
-        </div>
-    </div>
+<h1>
+    {{ if .IsPage }}
+        {{ .Parent.Title }}
+    {{ else }}
+        {{ .Title }}
+    {{ end }}
+</h1>
+<div class="product-list">
+    {{ range .Pages }}
+        {{ partial "products/list-item" . }}
+    {{ end }}
 </div>

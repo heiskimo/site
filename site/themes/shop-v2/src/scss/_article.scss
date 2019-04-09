@@ -1,0 +1,37 @@
+.article {
+    margin-top: 2rem;
+
+    .a__layout {
+        display: flex;
+
+        .a__picture {
+            flex: 1 0 60%;
+        }
+
+        .a__description {
+            flex: 1 1 auto;
+            padding: 2rem;
+
+            .select {
+                min-width: 5rem;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                color: #858c9a;
+            }
+        }
+    }
+}
+
+@include respond-to("small") {
+    .article {
+        .a__layout {
+            display: block;
+
+            .a__description {
+                padding: 0;
+            }
+        }
+    }
+}

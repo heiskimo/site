@@ -1,34 +1,66 @@
-<article class="section sctn">
-    <div class="sctn__content">
-        <h1>
-            {{ .Params.Title }}
-        </h1>
-        <h3>
-            {{ .Params.Price }}
-        </h3>
-        <button
-            class="snipcart-add-item button"
-            data-item-id="{{ .Params.Id }}"
-            data-item-name="{{ .Params.Title }}"
-            data-item-price="{{ .Params.Price }}"
-            data-item-url="{{ .Permalink }}"
-            data-item-description="{{ .Params.Description }}"
-        >
-            {{ .Site.Params.products.add }}
-        </button>
-        <div class="picture-list">
-            {{ $folder := .Params.ImagesFolder }}
-            {{ range .Params.Images }}
-                {{ $img := (printf "img/%s/%s" $folder . | relURL) }}
-                <div class="picture">
-                    <a href="{{ $img }}">
-                        <img src="{{ $img }}" alt="">
-                    </a>
-                </div>
-            {{ end }}
+<article class="article a">
+    <div class="a__layout">
+        <div id="picture-zoomer" class="a__picture picture__zoomer pz">
+            <div class="pz__zoom">
+                <img src="#" alt="">
+                <a href="#" target="_blank"></a>
+            </div>
+            <div class="pz__lightbox">
+                <img src="#" alt="">
+            </div>
+
+            <div class="pz__list">
+                {{ $folder := .Params.ImagesFolder }}
+                {{ range .Params.Images }}
+                    {{ $img := (printf "img/%s/%s" $folder . | relURL) }}
+                    <div class="pz__list__picture">
+                        <a href="{{ $img }}">
+                            <img src="{{ $img }}" alt="">
+                        </a>
+                    </div>
+                {{ end }}
+            </div>
         </div>
-        <p>
+        <div class="a__description">
+            <div>
+                <div class="">
+                    <h1>
+                        {{ .Params.Title }}
+                    </h1>
+                    <h3>
+                        {{ .Params.Price }}
+                    </h3>
+                </div>
+                <div>
+                    <div class="select">
+                        <select name="" id="">
+                            <option value="">S</option>
+                            <option value="">M</option>
+                            <option value="">L</option>
+                        </select>
+                        <svg
+                            aria-hidden="true"
+                            focusable="false"
+                            role="presentation"
+                            viewBox="0 0 100 100"
+                        >
+                            <path d="M52.575 76.81V12.586h-5V76.81L24.269 53.504l-3.38 3.381 29.186 29.187 29.186-29.187-3.38-3.38L52.575 76.81z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <button
+                    class="snipcart-add-item button"
+                    data-item-id="{{ .Params.Id }}"
+                    data-item-name="{{ .Params.Title }}"
+                    data-item-price="{{ .Params.Price }}"
+                    data-item-url="{{ .Permalink }}"
+                    data-item-description="{{ .Params.Description }}"
+                >
+                    {{ .Site.Params.products.add }}
+                </button>
+            </div>
+
             {{ .Content }}
-        </p>
+        </div>
     </div>
 </article>

@@ -1,11 +1,25 @@
 {{ block "header" . }}{{ partial "header" . }}{{end}}
+
+{{ .Scratch.Set "sectionClass" "" }}
+
+{{ if .Sections }}
+    {{ .Scratch.Set "sectionClass" "sctn--center" }}
+{{ end }}
+
 <div class="content c">
-    {{ if .Sections }}
-        {{ partial "products/home" . }}
-    {{ else }}
-        {{ block "product-list" . }}
-            {{ partial "products/list" . }}
-        {{end}}
-    {{ end }}
+    <div class="section sctn {{ .Scratch.Get "sectionClass" }}">
+        <div class="sctn__content">
+        {{ if .Sections }}
+            {{ partial "products/home" . }}
+        {{ else }}
+            {{ block "breadcrumb" . }}
+                {{ partial "breadcrumb" . }}
+            {{ end }}
+            {{ block "product-list" . }}
+                {{ partial "products/list" . }}
+            {{end}}
+        {{ end }}
+        </div>
+    </div>
 </div>
 {{ block "footer" . }}{{ partial "footer" . }}{{end}}

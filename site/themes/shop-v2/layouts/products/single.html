@@ -1,7 +1,16 @@
 {{ block "header" . }}{{ partial "header" . }}{{end}}
+
 <div class="content c">
-    {{ block "product-single" . }}
-        {{ partial "products/single" . }}
-    {{end}}
+    <div class="section sctn">
+        <div class="sctn__content">
+        {{ block "breadcrumb" . }}
+            {{ partial "breadcrumb" . }}
+        {{ end }}
+
+        {{ block "product-single" . }}
+            {{ partial "products/single" . }}
+        {{end}}
+        </div>
+    </div>
 </div>
 {{ block "footer" . }}{{ partial "footer" . }}{{end}}

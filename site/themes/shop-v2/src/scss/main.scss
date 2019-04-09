@@ -18,6 +18,7 @@ body {
     min-height: 100vh;
     background-color: $footer-background-color;
 }
+
 @import './button';
 @import './header';
 @import './footer';
@@ -25,4 +26,7 @@ body {
 @import './banner';
 @import './section';
 @import './product';
-@import './instagram';
+@import './picture';
+@import './breadcrumb';
+@import './article';
+@import './select';

@@ -81,51 +81,7 @@
     }
 
     .h__lang {
-        position: relative;
         margin-left: 0.5rem;
-
-        &:hover {
-            select {
-                border-color: $primary-color;
-                color: $primary-color;
-            }
-
-            svg {
-                fill: $primary-color;
-            }
-        }
-
-        select {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            background: white;
-            border: 1px solid #eee;
-            height: 2rem;
-            width: 3rem;
-            color: #242424;
-            font-size: .8rem;
-            border-radius: 0.3rem;
-            padding: 0 0.5rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            
-            &:focus {
-                outline: none;
-            }
-        }
-
-        svg {
-            pointer-events: none;
-            width: 12px;
-            height: 12px;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            right: 0.3rem;
-            fill: #888;
-            transition: fill 0.3s ease;
-        }
     }
 
     .h__mobile__close {

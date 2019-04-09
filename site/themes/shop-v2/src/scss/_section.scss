@@ -1,6 +1,6 @@
 $section-background-color: #fff;
 $section-background-color-dark: $primary-color;
-$section-max-width: 50rem;
+$section-width: 60rem;
 
 .section {
     background-color: $section-background-color;
@@ -16,7 +16,8 @@ $section-max-width: 50rem;
     }
 
     .sctn__content {
-        width: $section-max-width;
+        width: $section-width;
+        max-width: 100%;
         margin: auto;
     }
 

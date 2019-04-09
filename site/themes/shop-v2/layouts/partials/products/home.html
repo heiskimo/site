@@ -1,23 +1,19 @@
-<div class="section sctn sctn--center">
-    <div class="sctn__content">
-        <h1>Nos collections</h1>
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem vitae sed, voluptas, incidunt ullam ducimus quas delectus quis distinctio quibusdam nihil reprehenderit libero fugit magnam. Possimus incidunt iste cupiditate fugiat!
-        </p>
-        <div class="product-list product-list--grow">
-            {{ range .Sections }}
-                {{ $section := index (last 1 (split (delimit (split .URL "/") "," "") ",")) 0 }}
-                <div class="product">
-                    <a href="{{ .Permalink }}" class="product-home__section product-home__section--{{ $section }}">
-                        <h2>
-                            {{ .Title }}
-                        </h2>
-                        <div class="p__picture">
-                            <img src="http://placeimg.com/400/400/any/people?v=a" alt="">
-                        </div>
-                    </a>
+<h1>Nos collections</h1>
+<p>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem vitae sed, voluptas, incidunt ullam ducimus quas delectus quis distinctio quibusdam nihil reprehenderit libero fugit magnam. Possimus incidunt iste cupiditate fugiat!
+</p>
+<div class="product-list product-list--grow">
+    {{ range .Sections }}
+        {{ $section := index (last 1 (split (delimit (split .URL "/") "," "") ",")) 0 }}
+        <div class="product">
+            <a href="{{ .Permalink }}" class="product-home__section product-home__section--{{ $section }}">
+                <h2>
+                    {{ .Title }}
+                </h2>
+                <div class="p__picture">
+                    <img src="http://placeimg.com/400/400/any/people?v=a" alt="">
                 </div>
-            {{ end }}
+            </a>
         </div>
-    </div>
+    {{ end }}
 </div>
