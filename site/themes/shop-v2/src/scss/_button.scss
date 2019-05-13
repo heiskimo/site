@@ -41,6 +41,12 @@ button {
         background-color: $primary-color;
         color: white;
     }
+
+    &.button--light {
+        background-color: rgba($primary-color, 0.9);
+        color: white;
+        border-color: white;
+    }
 }
 
 a {

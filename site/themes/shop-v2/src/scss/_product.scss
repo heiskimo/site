@@ -38,7 +38,7 @@
 }
 
 @include respond-to("small") {
-    .product-list {
+    .product-list:not(.product-list--no-wrap) {
         display: block;
 
         .product {
@@ -46,6 +46,18 @@
             
             .p__picture {
                 height: 10rem;
+            }
+        }
+    }
+    
+    .product-list.product-list--no-wrap {
+        margin: 0 -0.5rem;
+
+        .product {
+            padding: 0.5rem;
+
+            &.product--small-basis-two {
+                flex-basis: calc(100% / 2);
             }
         }
     }

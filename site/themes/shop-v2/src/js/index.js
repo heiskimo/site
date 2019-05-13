@@ -181,9 +181,10 @@ function instagramFeed () {
             const pictures = data.data;
             pictures.forEach((picture) => {
                 container.innerHTML += `
-                <div class="picture">
+                <a href="${picture.link}" target="_blank" class="picture">
                     <img src="${picture.images.low_resolution.url}" alt="">
-                </div>
+                    <span>${picture.caption.text}</span>
+                </a>
                 `;
             });
         }

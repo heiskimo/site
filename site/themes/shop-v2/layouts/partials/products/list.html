@@ -5,7 +5,7 @@
         {{ .Title }}
     {{ end }}
 </h1>
-<div class="product-list">
+<div class="product-list product-list--no-wrap">
     {{ range .Pages }}
         {{ partial "products/list-item" . }}
     {{ end }}
