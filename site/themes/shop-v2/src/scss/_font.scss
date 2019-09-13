@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,700');
+// @import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,700');
 @import url('https://fonts.googleapis.com/css?family=Karla:400,700');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700');
+@import url('https://fonts.googleapis.com/css?family=Corben:400,700&display=swap');
 
 $ff1: 'Karla', sans-serif;
-$ff2: 'Crimson Text', serif;
+$ff2: 'Corben', 'Playfair Display', serif;
 
 body {
 	font-family: $ff1;

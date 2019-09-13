@@ -25,7 +25,7 @@ homeURL="/"
                 add="Ajouter au panier"
                 [languages.fr.params.products.breadcrumb]
                     home="Accueil"
-                    products="Produits"
+                    products="La boutique"
     [languages.en]
         title = "heiskimō - Shop"
         weight = 2
@@ -44,4 +44,4 @@ homeURL="/"
                 add="Add to cart"
                 [languages.en.params.products.breadcrumb]
                     home="Home"
-                    products="Products"
+                    products="Shop"
